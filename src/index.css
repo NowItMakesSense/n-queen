@@ -1,0 +1,179 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+td {
+	height: 20px;
+	width: 20px;
+}
+
+h3 {
+	display: inline-block;
+}
+
+#root {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main {
+	border: 0.1px solid gray;
+	border-radius: 4px;
+	box-shadow: 0px 0px 10px 03px grey;
+
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 12vw 12vw 12vw 12vw;
+	grid-template-rows: 8vh 52vh;
+	grid-template-areas:
+		'text text text text'
+		'xadrez xadrez info info';
+}
+
+.headerCab {
+	background-color: #664aff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-area: text;
+}
+
+.tabuleiro {
+	grid-area: xadrez;
+	overflow: auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info {
+	grid-area: info;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pdHome {
+	padding: 5px;
+}
+
+.tbXadrez {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.histXadrez {
+	padding: 15px;
+
+	max-width: 150vh;
+	overflow: auto;
+	max-height: 16vw;
+	background-color: #6d6c6c2e;
+	box-shadow: 0px 0px 10px 03px grey;
+	margin-top: 15px;
+}
+
+.divHist {
+	display: inline-block;
+	padding: 5px;
+}
+
+.blackcell {
+	background-color: black;
+}
+
+.whitecell {
+	background-color: white;
+}
+
+.queen {
+	background-color: red;
+}
+
+.search-box {
+	position: relative;
+	height: 45px;
+	width: 350px;
+}
+
+.search-box input {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	background: #fff;
+	font-size: 18px;
+	border-radius: 50px;
+	padding: 0 60px 0 20px;
+}
+
+.search-box .search-btn {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	background: #664aff;
+	color: white;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5px;
+	line-height: 44px;
+	text-align: center;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.buttonHist {
+	color: #fff;
+	background-color: #664aff;
+	padding: 1rem 2rem;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	outline: 0;
+	border: 0;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.infoTitle {
+	flex-grow: 4;
+	margin-top: 35px;
+}
+
+.infoImg {
+	flex-grow: 10;
+}
+
+.showQtd {
+	display: flex;
+	align-items: flex-end;
+}
+
+.infoButton {
+	flex-grow: 6;
+}
+
+@media (max-height: 700px) {
+	.main {
+		grid-template-rows: 12vh 60vh;
+	}
+	.search-box {
+		height: 35px;
+	}
+	.search-box .search-btn {
+		height: 30px;
+		width: 30px;
+		line-height: 35px;
+	}
+}
